@@ -48,18 +48,19 @@ $("#board").find("tr").each(function() {
 
 function countMovements(origX, origY, vertical, horizontal, diagonal, knight) {
 	if (knight == 1) {
-		newPositions[8] = {};
+		newPositions = {};
 	} else {
-		newPositions[(vertical) + (horizontal) + (diagonal)] = {};
+		newPositions = {};
 	}
 	if (vertical > 0) {
 		for (i = 0; i < 2 * vertical; i++) {
 			while (i < vertical) {
-				newPosition.push(stranslateVerticalPos(origY - i) + origX);
+				newPositions.push(stranslateVerticalPos(origY - i) + origX);
 			}
-			newPosition.push(translateVerticalPos(origY + (i - vertical)) + origX);
+			newPositions.push(translateVerticalPos(origY + (i - vertical)) + origX);
 		}
 	}
+	return newPositions;
 }
 
 class Pieces {
@@ -74,11 +75,9 @@ class Pieces {
 			let isTaken = true;
 		}
 	}
-
 }
 class King extends Pieces {
 	constructor(color, positionX, positionY) {
 		let isTaken = false;
-
 	}
 }
