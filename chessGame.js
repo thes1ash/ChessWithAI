@@ -38,7 +38,10 @@ $("#board").find("tr").each(function() {
 			'<td id=' +
 			translateVerticalPos(i) +
 			$(this).attr("id") +
-			'"></td>'
+			'">' +
+			translateVerticalPos(i) +
+			$(this).attr("id") +
+			'</td>'
 		);
 	}
 })
@@ -52,9 +55,9 @@ function countMovements(origX, origY, vertical, horizontal, diagonal, knight) {
 	if (vertical > 0) {
 		for (i = 0; i < 2 * vertical; i++) {
 			while (i < vertical) {
-				newPosition[].push(stranslateVerticalPos(origY - i) + origX);
+				newPosition.push(stranslateVerticalPos(origY - i) + origX);
 			}
-			newPosition[].push(translateVerticalPos(origY + (i - vertical)) + origX);
+			newPosition.push(translateVerticalPos(origY + (i - vertical)) + origX);
 		}
 	}
 }
