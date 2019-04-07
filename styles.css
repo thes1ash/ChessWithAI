@@ -1,0 +1,15 @@
+body table#board {
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+body table#board tr td {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+body table#board tr:nth-of-type(2n+1) td:nth-of-type(2n+1) {
+  background-color: #a2a2a2;
+}
+body table#board tr:nth-of-type(2n) td:nth-of-type(2n) {
+  background-color: #a2a2a2;
+}
