@@ -13,3 +13,4 @@ body table#board tr:nth-of-type(2n+1) td:nth-of-type(2n+1) {
 body table#board tr:nth-of-type(2n) td:nth-of-type(2n) {
   background-color: #a2a2a2;
 }
+/*# sourceMappingURL=styles.css.map */
