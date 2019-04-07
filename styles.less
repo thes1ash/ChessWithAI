@@ -1,22 +1,24 @@
+@positionBlack: #a2a2a2;
+@black: #000;
 body {
 	table#board {
-		border: 2px solid #000;
+		border: 2px solid @black;
 		border-collapse: collapse;
 		tr {
 			td {
 				width: 100px;
 				height: 100px;
-				border: 1px solid #000;
+				border: 1px solid @black;
 			}
 		}
 		tr:nth-of-type(2n+1) {
 			td:nth-of-type(2n+1) {
-				background-color: #a2a2a2;
+				background-color: @positionBlack;
 			}
 		}
 		tr:nth-of-type(2n) {
 			td:nth-of-type(2n) {
-				background-color: #a2a2a2;
+				background-color: @positionBlack;
 			}
 		}
 	}
