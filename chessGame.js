@@ -53,11 +53,19 @@ function countMovements(origX, origY, vertical, horizontal, diagonal, knight) {
 		newPositions = {};
 	}
 	if (vertical > 0) {
-		for (i = 0; i < 2 * vertical; i++) {
+		for (let i = 0; i < 2 * vertical; i++) {
 			while (i < vertical) {
 				newPositions.push(stranslateVerticalPos(origY - i) + origX);
 			}
 			newPositions.push(translateVerticalPos(origY + (i - vertical)) + origX);
+		}
+	}
+	if (horizontal > 0) {
+		for (let i = 0; i < 2 * horizontal; i++) {
+			while (i < horizontal) {
+				newPositions.push(stranslateVerticalPos(origY) + (origX - i));
+			}
+			newPositions.push(stranslateVerticalPos(origY) + (origX + (i - horizontal)));
 		}
 	}
 	return newPositions;
